@@ -1,0 +1,117 @@
+% ctrl-alt-b でビルド
+% ここからヘッダ部
+\documentclass[a4paper,10pt,titlepage]{jsarticle}
+%使用パッケージ設定
+\usepackage[margin=20mm,includefoot]{geometry}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{url}
+\usepackage{moreverb}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{ascmac}
+\usepackage{listings,jlisting}
+\usepackage{ulem}
+%\usepackage[dvipdfmx]{hyperref}
+%\usepackage{pxjahyper}
+% 自作命令設定
+\newcommand{\ttt}[1]{\texttt{#1}}
+%ここからソースコードの表示に関する設定
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+%ここまでソースコードの表示に関する設定
+% maketitle用の設定
+\title{辞書的な何か}
+\date{更新日：2020-07-09}
+\author{作成者：Me}
+
+%頁番号の有無
+%\pagestyle{empty}
+% ここから本文
+\begin{document}
+% タイトルページの作成
+\maketitle
+
+\section{あ}
+
+\textbf{Inpainting}：修復するの意。画像処理分野では「いらないものを消す」などの技術に当たる。\\
+
+\section{か}
+
+\textbf{コンテクスト}：画像処理ではおそらく「背景」に近い意味を持つ
+
+\section{さ}
+
+\textbf{3次元点群}：スキャナーからの相対的なX,Y,Z情報や、カメラの画像データから得た色の情報（RGB）を持った点の集合体
+
+\section{た}
+
+\textbf{テンソル}：簡単に言うと多次元配列のこと\\
+\quad \textbf{トポロジー}：変形しても変化しない図形の性質
+\begin{itemize}
+  \item 実際の世界に、きっちり三角形のものや、完全に球体のものは存在しない。
+  \item 図形以外のもの、例えばデータの解析にも使いたい。細かすぎるデータから俯瞰的な情報を得たい\\
+  $\Rightarrow$ 図形の大雑把な性質が役に立つ（トポロジー $\sim$ 位相幾何学）
+\end{itemize}
+
+\section{な}
+
+\section{は}
+
+\textbf{ヒューリスティック}：発見的な（方法）、経験則（の）、試行錯誤（的な）という意味の英単語。ITの分野では、問題の解答を得るための方法論の一つで、常に正しいとは限らないが経験的にある程度正しい解を導ける推論や経験則などを利用して、近似的あるいは暫定的な解を得る手法のことをヒューリスティックということが多い。\\
+
+
+\section{ま}
+
+\section{や}
+
+\section{ら}
+
+\textbf{レンダリング}：何らかの抽象的なデータ集合を元に、一定の処理や演算を行って画像や映像、音声などを生成すること。\\
+\quad \textbf{Layered Depth Image}：(LDI,層化深度画像)３次元空間上の任意に決めた視点位置とスクリーンに対して，そのスクリーン上のピクセルごとに，そのピクセルに投影される（そのピクセルを通る視線が交差する）全ての物体上の点に関する色値とデプス値の組（レイヤ要素）をリストとして持たせたものである．$\Rightarrow$被写体や背景の形状を3次元点群として保持する画像データ。図\ref{fig:LDI},参考\cite{url:LDI}
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[width=90mm]{LDI.png}
+ \end{center}
+ \caption{Layered Depth Image}
+ \label{fig:LDI}
+\end{figure}
+
+\section{わ}
+
+\textbf{ワーピング}：単一の画像上で特徴点を指定し，その特徴点の移動量を指定することで，新たな画像を生成する方法\\
+
+\begin{comment}
+\begin{itemize}
+  \item
+\end{itemize}
+
+\end{comment}
+\begin{thebibliography}{99}
+  \bibitem{url:LDI} \url{https://www.art-science.org/journal/v3n1/v3n1pp008/artsci-v3n1pp008.pdf}
+\end{thebibliography}
+
+
+
+
+
+\end{document}
